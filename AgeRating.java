@@ -2,10 +2,10 @@
 /**
  * Enumeration class AgeRating - write a description of the enum class here
  *
- * @author (your name here)
- * @version (version number or date here)
+ * @author (Anthony O'Sullivan)
+ * @version (0.0)
  */
 public enum AgeRating
 {
-    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+    E, T, M
 }

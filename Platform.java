@@ -2,10 +2,10 @@
 /**
  * Enumeration class Platform - write a description of the enum class here
  *
- * @author (your name here)
- * @version (version number or date here)
+ * @author (Anthony O'Sullivan)
+ * @version (0.0)
  */
 public enum Platform
 {
-    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+    PC, PLAYSTATION, XBOX
 }

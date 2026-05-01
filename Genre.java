@@ -2,10 +2,10 @@
 /**
  * Enumeration class Genre - write a description of the enum class here
  *
- * @author (your name here)
- * @version (version number or date here)
+ * @author (Anthony O'Sullivan)
+ * @version (0.0)
  */
 public enum Genre
 {
-    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+    ACTION, RPG, ADVENTURE
 }

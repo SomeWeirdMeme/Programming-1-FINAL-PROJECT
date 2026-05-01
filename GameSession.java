@@ -2,32 +2,42 @@
 /**
  * Write a description of class GameSession here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (David Grondin)
+ * @version (0.0)
  */
 public class GameSession
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private int durationMinutes;
+    private String date;
+    private String sessionNotes;
+    
+    
     /**
      * Constructor for objects of class GameSession
      */
     public GameSession()
     {
-        // initialise instance variables
-        x = 0;
+        
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public void startSession(){
+        
+    }
+    
+    public String getSummary(){
+        return "x";
+    }
+    
+    public String getNotes(){
+        return "x";
+    }
+    
+    public int getDurationsMinutes(){
+        return 2;
+    }
+    
+    
+    public String toString(){
+        return "x";
     }
 }
