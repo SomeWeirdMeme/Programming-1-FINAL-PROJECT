@@ -5,7 +5,7 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class SinglePlayer
+public class SinglePlayer extends Game
 {
     // instance variables - replace the example below with your own
     private int x;
