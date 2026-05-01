@@ -14,10 +14,9 @@ public class Multiplayer extends Game
     /**
      * Constructor for objects of class Multiplayer
      */
-    public Multiplayer()
+    public Multiplayer(String title, Genre genre, Platform platform, AgeRating ageRating, int maxPlayers, boolean localMultiplayer)
     {
-        
-        
+     super(title, genre, platform, ageRating);   
     }
     
     public void play(){

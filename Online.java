@@ -7,16 +7,15 @@
  */
 public class Online extends Game
 {
-    // instance variables - replace the example below with your own
     private String serverName;
     private boolean requiresSubscription;
     
     /**
      * Constructor for objects of class Online
      */
-    public Online()
+    public Online(String title, Genre genre, Platform platform, AgeRating ageRating, String serverName, boolean requiresSubscription)
     {
-                
+        super(title, genre, platform, ageRating);
     }
     
     public void play(){
@@ -28,6 +27,6 @@ public class Online extends Game
     }
     
     public String getDetails(){
-        return "x";
+        return null;
     }
 }

@@ -10,12 +10,12 @@ public class GameSession
     private int durationMinutes;
     private String date;
     private String sessionNotes;
-    
+    private Game game;
     
     /**
      * Constructor for objects of class GameSession
      */
-    public GameSession()
+    public GameSession(Game game, String date)
     {
         
     }
@@ -32,10 +32,13 @@ public class GameSession
         return "x";
     }
     
-    public int getDurationsMinutes(){
+    public int getDurationMinutes(){
         return 2;
     }
     
+    public void endSession(int durationMinutes, String notes){
+        
+    }
     
     public String toString(){
         return "x";

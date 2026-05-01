@@ -22,7 +22,7 @@ HOW TO START THIS PROJECT:a
 4. Follow the menu instructions to interact with the project.
 
 AUTHORS:
-- Anthony Joseph O'Sullivan Nanquen Chavez (
+- Anthony Joseph O'Sullivan Nanquen Chavez
 - David Grondin Garcia
 
 USER INSTRUCTIONS:To be determined...

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * Write a description of class Game here.
@@ -9,17 +10,19 @@ public class Game
 {
     // instance variables - replace the example below with your own
     private String date;
-    
-
+    private Genre genre;
+    private Platform platform;
+    private AgeRating ageRating;
+    private ArrayList<Integer> ratings;
     /**
      * Constructor for objects of class Game
      */
-    public Game()
+    public Game(String title, Genre genre, Platform platform, AgeRating ageRating)
     {
         
     }
     
-    public void addRating(){
+    public void addRating(int rating){
         
     }
     
