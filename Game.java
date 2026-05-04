@@ -25,7 +25,7 @@ public class Game
     /**
      * Constructor for objects of class Game
      */
-    public Game(String title, Genre genre, Platform platform, AgeRating ageRating)
+    public Game(String title, double gameSize, Genre genre, Platform platform, AgeRating ageRating)
     {
         
     }
@@ -34,19 +34,23 @@ public class Game
         
     }
     
-    public double getAverage(){
-        return 8.0;
+    public double getAverageRating(){
+        return 1;
+    }
+    
+    public double getGameSize(){
+        return 1;
     }
     
     public int getNumberOfRatings(){
-        return 4;
+        return 1;
     }
     
     public String getDetails(){
-        return "x";
+        return null;
     }
     
     public String toString(){
-        return "farwars";
+        return null;
     }
 }

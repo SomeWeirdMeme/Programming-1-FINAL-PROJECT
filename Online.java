@@ -17,9 +17,9 @@ public class Online extends Game
     /**
      * Constructor for objects of class Online
      */
-    public Online(String title, Genre genre, Platform platform, AgeRating ageRating, String serverName, boolean requiresSubscription)
+    public Online(String title, double gameSize, Genre genre, Platform platform, AgeRating ageRating, String serverName, boolean requiresSubscription)
     {
-        super(title, genre, platform, ageRating);
+        super(title, gameSize, genre, platform, ageRating);
     }
     
     public void play(){

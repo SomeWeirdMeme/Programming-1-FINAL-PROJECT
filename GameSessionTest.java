@@ -8,8 +8,8 @@ import org.junit.jupiter.api.Test;
 /**
  * The test class GameSessionTest.
  *
- * @author  (David Grondin)
- * @version (0.0)
+ * @author  (your name)
+ * @version (a version number or a date)
  */
 public class GameSessionTest
 {

@@ -8,8 +8,8 @@ import org.junit.jupiter.api.Test;
 /**
  * The test class SinglePlayerTest.
  *
- * @author  (Anthony O'Sullivan)
- * @version (0.0)
+ * @author  (your name)
+ * @version (a version number or a date)
  */
 public class SinglePlayerTest
 {

@@ -16,9 +16,9 @@ public class SinglePlayer extends Game
     /**
      * Constructor for objects of class SinglePlayer
      */
-    public SinglePlayer(String title, Genre genre, Platform platform, AgeRating ageRating, boolean hasStoryMode, int estimatedHours)
+    public SinglePlayer(String title, double gameSize, Genre genre, Platform platform, AgeRating ageRating, boolean hasStoryMode, int estimatedHours)
     {
-        super(title, genre, platform, ageRating);   
+        super(title, gameSize, genre, platform, ageRating);   
     }
         
     public void play(){
