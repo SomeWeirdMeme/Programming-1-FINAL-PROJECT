@@ -1,14 +1,16 @@
 
 /**
- * Write a description of class Multiplayer here.
+ * Represents a multiplayer game.
+ * Multiple players, and local multiplayer.
  *
  * @author (Anthony O'Sullivan)
  * @version (0.0)
  */
 public class Multiplayer extends Game
 {
-    // instance variables - replace the example below with your own
+    //Maximum number of players allowed in the game.
     private int maxPlayers;
+    // Sees wether a game has local multiplayer (Same device).
     private boolean localMultiplayer;
     
     /**

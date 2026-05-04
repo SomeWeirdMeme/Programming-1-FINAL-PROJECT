@@ -1,13 +1,16 @@
 
 /**
- * Write a description of class SinglePlayer here.
+ * Represents a singlePlayer game.
+ * Story mode and amount of hours to finish the game.
  *
  * @author (Anthony O'Sullivan)
  * @version (0.0)
  */
 public class SinglePlayer extends Game
 {
+    //Wether a game has or doesn't contain a storyMode.
     private boolean hasStoryMode;
+    //Estimated number of hours to complete the game.
     private int estimatedHours;
     
     /**

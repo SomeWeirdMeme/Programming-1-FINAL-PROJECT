@@ -1,18 +1,24 @@
 import java.util.ArrayList;
 
 /**
- * Write a description of class Game here.
+ * Game is a class where video games are created and put in a system.
+ * Stores data such as the title, genre, platform, age rating, and the user ratings.
+ * Is base class for (SinglePlayer, MultiPlayer, Online).
  *
  * @author (David Grondin, Anthony O'Sullivan)
  * @version (0.0)
  */
 public class Game
 {
-    // instance variables - replace the example below with your own
-    private String date;
+    //Name of the game / Title of the game.
+    private String title;
+    //The genre of the game (Action, RPG, ADVENTURE)
     private Genre genre;
+    //The platform that the game is on (PC, PLAYSTATION, XBOX) 
     private Platform platform;
+    //The age rating of the game (E, T, M)
     private AgeRating ageRating;
+    //A collection of ratings for the game.
     private ArrayList<Integer> ratings;
     /**
      * Constructor for objects of class Game

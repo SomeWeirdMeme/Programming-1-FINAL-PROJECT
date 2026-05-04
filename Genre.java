@@ -1,6 +1,7 @@
 
 /**
- * Enumeration class Genre - write a description of the enum class here
+ * Enumeration class Genre
+ * The category of the game / theme of the game.
  *
  * @author (Anthony O'Sullivan)
  * @version (0.0)

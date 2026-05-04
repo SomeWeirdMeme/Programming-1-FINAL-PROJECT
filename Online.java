@@ -1,13 +1,17 @@
 
 /**
- * Write a description of class Online here.
+ * Represents an online game extending off game.
+ * Online models games that need internet where the subscription is actually usefull.
+ * Ex: Internet bill, xbox live, etc.
  *
  * @author (Anthony O'Sullivan)
  * @version (0.0)
  */
 public class Online extends Game
 {
+    //Name of the server.
     private String serverName;
+    //Kinda not usefull but indicates wether you need a subscription to play online.
     private boolean requiresSubscription;
     
     /**

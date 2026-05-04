@@ -1,16 +1,17 @@
 import java.util.ArrayList;
 
 /**
- * Write a description of class GameLibrary here.
- *
+ * 
  * @author (David Grondin, Anthony O'Sullivan)
  * @version (0.0)
  */
 public class GameLibrary
 {
-    // instance variables - replace the example below with your own
+    //Name of the game library (Kinda not important)
     private String name;
+    //Collection of all the games stored in the library.
     private ArrayList<Game> games;
+    //List of all game session in the library
     private ArrayList<GameSession> sessions;
     
     /**
