@@ -15,13 +15,15 @@ public class GameSession
     private String date;
     //Notes that are created and stored for later use, (Call on getNotes).
     private String sessionNotes;
+     //Checks which region the game session is taking place in.
+    private String region;
     //The game that is being referred to in the current session.
     private Game game;
     
     /**
      * Creates a session linked to a specific game and date.
      */
-    public GameSession(Game game, String date)
+    public GameSession(Game game, String date, String region)
     {
         
     }
@@ -36,7 +38,7 @@ public class GameSession
     
     /**
      * Returns a summary of the session details
-     * game, duration, and date.
+     * game, duration, region, and date.
      */
     public String getSummary(){
         return "x";

@@ -18,6 +18,8 @@ public class Game
     private Platform platform;
     //The age rating of the game (E, T, M)
     private AgeRating ageRating;
+    //The amount of space it is taking up for the game (in megabytes)
+    private double gameSize;
     //A collection of ratings for the game.
     private ArrayList<Integer> ratings;
     /**

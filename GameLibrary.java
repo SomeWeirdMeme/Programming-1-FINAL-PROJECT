@@ -46,6 +46,10 @@ public class GameLibrary
         return null;
     }
     
+    public ArrayList<Game> listBySize(Double gameSize){
+        return null;
+    }
+    
     public ArrayList<Game> getTopRatedGames(String title){
         return null;
     }
