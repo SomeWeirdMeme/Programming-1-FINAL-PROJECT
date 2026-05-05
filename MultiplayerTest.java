@@ -8,8 +8,8 @@ import org.junit.jupiter.api.Test;
 /**
  * The test class MultiplayerTest.
  *
- * @author  (your name)
- * @version (a version number or a date)
+ * @author  (Anthony O'Sullivan, David Grondin)
+ * @version (0.0)
  */
 public class MultiplayerTest
 {
