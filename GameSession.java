@@ -29,6 +29,7 @@ public class GameSession
         //SET date
         //SET region
         //SET duration = 0
+        durationMinutes = 0;
         //SET notes = empty
     }
     

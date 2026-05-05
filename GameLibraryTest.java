@@ -39,4 +39,23 @@ public class GameLibraryTest
     public void tearDown()
     {
     }
+
+    @Test
+    public void TestingObjectCreation()
+    {
+        GameLibrary gameLibr1 = new GameLibrary("Hello");
+        gameLibr1.printLibraryDetails();
+    }
+    
+    
+
+    @Test
+    public void TestPrintDetails()
+    {
+        GameLibrary gameLibr1 = new GameLibrary("Library");
+        gameLibr1.printLibraryDetails();
+        gameLibr1.printSessionLog();
+    }
 }
+
+

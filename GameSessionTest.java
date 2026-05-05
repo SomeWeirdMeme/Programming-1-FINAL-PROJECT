@@ -39,4 +39,23 @@ public class GameSessionTest
     public void tearDown()
     {
     }
+
+    @Test
+    public void TestBaiscObjectCreation()
+    {
+        GameSession gameSess1 = new GameSession(null, "april", "place");
+        gameSess1.startSession();
+    }
+
+    
+
+    @Test
+    public void ObjectCreation()
+    {
+        GameSession gameSess1 = new GameSession(null, "egf", "fe");
+        gameSess1.endSession(23, "ball");
+        assertEquals(null, gameSess1.getNotes());
+    }
 }
+
+

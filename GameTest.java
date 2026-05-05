@@ -39,4 +39,24 @@ public class GameTest
     public void tearDown()
     {
     }
+
+    @Test
+    public void GameCreation()
+    {
+        Game game1 = new Game("efg", 3.7, null, null, null);
+        game1.addRating(4);
+    }
+
+    
+
+    @Test
+    public void TestingMethods()
+    {
+        Game game1 = new Game("cme", 3.6, null, null, null);
+        game1.addRating(34);
+        assertEquals(34, game1.getNumberOfRatings());
+        assertEquals(4, game1.toString());
+    }
 }
+
+

@@ -165,5 +165,6 @@ public class GameLibrary
     public void printSessionLog(){
         //FOR each session in sessions list
         //SHOW session
+        System.out.println("Majeed");
     }
 }

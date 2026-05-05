@@ -39,4 +39,19 @@ public class SinglePlayerTest
     public void tearDown()
     {
     }
+
+    @Test
+    public void ObjectCreation()
+    {
+        SinglePlayer singlePl1 = new SinglePlayer("fef", 3.0, null, null, null, true, 45);
+        assertEquals(null, singlePl1.getDetails());
+    }
+
+    @Test
+    public void TestingMethods()
+    {
+        SinglePlayer singlePl1 = new SinglePlayer("fe", 3.9, null, null, null, false, 23);
+        singlePl1.play();
+    }
 }
+
