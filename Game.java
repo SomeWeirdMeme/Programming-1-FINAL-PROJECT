@@ -27,30 +27,77 @@ public class Game
      */
     public Game(String title, double gameSize, Genre genre, Platform platform, AgeRating ageRating)
     {
-        
+        //SET title
+        //SET gameSize
+        //SET genre
+        //SET platform
+        //SET ageRating
+        //CREATE empty ratings list
     }
     
-    public void addRating(int rating){
-        
+    /**
+     * adds a rating to the game.
+     */
+    public void addRating(int rating)
+    {
+        //ADD rating to ratings list
     }
     
-    public double getAverageRating(){
+    /**
+     * Calculates and returns the average between all ratings for the game.
+     */
+    public double getAverageRating()
+    {
+        //IF ratings list is empty
+        //  RETURN 0
+        //SET sum = 0
+        //FOR each rating in ratings
+        //ADD rating to sum
+        //RETURN sum
         return 1;
     }
     
-    public double getGameSize(){
+    /**
+     * Returns the size of the game.
+     */
+    public double getGameSize()
+    {
+        //RETURN gameSize
         return 1;
     }
     
-    public int getNumberOfRatings(){
+    /**
+     * Returns the total number of ratings submitted for the game.
+     */
+    public int getNumberOfRatings()
+    {
+        //RETURN size of ratings list
         return 1;
     }
     
-    public String getDetails(){
+    /**
+     * Returns a string containing the games details.
+     * Title, genre, platform, age rating, and size.
+     */
+    public String getDetails()
+    {
+        //RETURN string with:
+        //title
+        //genre
+        //platform
+        //age rating
+        //average rating
         return null;
     }
     
-    public String toString(){
+    /**
+     * Returns a readable summary of the game for printing.
+     * This method is automatically called when object is printed, summary of game info.
+     */
+    public String toString()
+    {
+        //RETURN string with
+        //title + platform + average rating
         return null;
     }
 }

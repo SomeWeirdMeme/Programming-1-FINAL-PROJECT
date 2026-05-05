@@ -18,14 +18,20 @@ public class Multiplayer extends Game
      */
     public Multiplayer(String title, double gameSize, Genre genre, Platform platform, AgeRating ageRating, int maxPlayers, boolean localMultiplayer)
     {
-     super(title, gameSize, genre, platform, ageRating);   
+       super(title, gameSize, genre, platform, ageRating);
+       //SET maxPlayers
+       //SET localMultiplayer
     }
     
     public void play(){
-        
+        //PRINT or simulate multi
     }
     
     public String getDetails(){
+        //GET base details from Game
+        //ADD max players
+        //ADD local multi info
+        //RETURN string
         return "x";
     }
     

@@ -25,7 +25,16 @@ public class GameSession
      */
     public GameSession(Game game, String date, String region)
     {
-        
+        //SET game
+        //SET date
+        //SET region
+        //SET duration = 0
+        //SET notes = empty
+    }
+    
+    //This needs some work Imma fix afterwards region is fully implemented I think...
+    public String getRegion(){
+        return region;
     }
     
     /**
@@ -33,7 +42,7 @@ public class GameSession
      * Used to track Mins and similar data.
      */
     public void startSession(){
-        
+        //SET duration = 0
     }
     
     /**
@@ -41,6 +50,11 @@ public class GameSession
      * game, duration, region, and date.
      */
     public String getSummary(){
+        //RETURN string with:
+        //game
+        //date
+        //region
+        //duration
         return "x";
     }
     
@@ -48,7 +62,7 @@ public class GameSession
      * Returns the notes recorded for the session.
      */
     public String getNotes(){
-        return "x";
+        return "notes";
     }
     
     
@@ -56,7 +70,7 @@ public class GameSession
      * Returns the duration of the session in mins.
     */
     public int getDurationMinutes(){
-        return 2;
+        return durationMinutes;
     }
     
     /**
@@ -64,7 +78,8 @@ public class GameSession
      * 
     */
     public void endSession(int durationMinutes, String notes){
-        
+        //SET duration 
+        //SET notes
     }
     
     
@@ -72,6 +87,8 @@ public class GameSession
      * Returns a string representation of the session 
      */
     public String toString(){
+        //RETURN short summary of session
         return "x";
     }
+    
 }

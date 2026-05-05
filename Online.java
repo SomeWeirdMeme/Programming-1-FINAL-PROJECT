@@ -20,17 +20,30 @@ public class Online extends Game
     public Online(String title, double gameSize, Genre genre, Platform platform, AgeRating ageRating, String serverName, boolean requiresSubscription)
     {
         super(title, gameSize, genre, platform, ageRating);
+        
+        //SET serverName
+        //SET requiresSubscription 
     }
     
-    public void play(){
-        
+    public void play()
+    {
+        //SHOWING Starting online game
     }
     
-    public void connect(){
-        
+    public void connect()
+    {
+        //IF requiresSubscription is true
+        //SHOW "Checking subscription..."
+        //SHOW "Connection to server" + serverName
+        //Else
+        //SHOW "Connection to server" + serverName
+        //END
     }
     
     public String getDetails(){
+        //GET base game details (.getDetails)
+        //ADD servename
+        //ADD requiresSubscription info
         return null;
     }
 }

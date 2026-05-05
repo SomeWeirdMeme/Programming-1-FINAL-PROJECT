@@ -14,18 +14,28 @@ public class SinglePlayer extends Game
     private int estimatedHours;
     
     /**
-     * Constructor for objects of class SinglePlayer
+     * Constructs a single player game with its basic details and completion info.
      */
     public SinglePlayer(String title, double gameSize, Genre genre, Platform platform, AgeRating ageRating, boolean hasStoryMode, int estimatedHours)
     {
-        super(title, gameSize, genre, platform, ageRating);   
+        super(title, gameSize, genre, platform, ageRating); 
+        
+        this.hasStoryMode = hasStoryMode;
+        this.estimatedHours = estimatedHours;
     }
         
+    /**
+     * Simulates playing the game
+     */
     public void play(){
-        
+        //PRINT or simulate playing the game
     }
     
     public String getDetails(){
+        //GET base details from Game
+        //ADD story mode info
+        //ADD estimated hours
+        //RETURN string
         return "x";
     }
 }
