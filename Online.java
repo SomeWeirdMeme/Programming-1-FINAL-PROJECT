@@ -40,6 +40,14 @@ public class Online extends Game
         //END
     }
     
+    public String toString(){
+        //GET base details from Game
+        //ADD servername
+        //ADD requiresSubs info
+        //RETURN string
+        return "Online : " + super.toString();
+    }
+    
     public String getDetails(){
         //GET base game details (.getDetails)
         //ADD servename

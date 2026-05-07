@@ -27,7 +27,7 @@ public class Multiplayer extends Game
         //PRINT or simulate multi
     }
     
-    public String getDetails(){
+    public String toString(){
         //GET base details from Game
         //ADD max players
         //ADD local multi info

@@ -28,6 +28,7 @@ public class GameTest
     @BeforeEach
     public void setUp()
     {
+        Game game1 = new Game("Roblox", 34.0, Genre.ADVENTURE, Platform.PLAYSTATION, AgeRating.T);
     }
 
     /**
@@ -39,24 +40,31 @@ public class GameTest
     public void tearDown()
     {
     }
-
-    @Test
-    public void GameCreation()
-    {
-        Game game1 = new Game("efg", 3.7, null, null, null);
-        game1.addRating(4);
-    }
-
     
+    @Test
+    public void TestingRatings()
+    {
+        Game game1 = new Game("Halo", 67.0, Genre.ACTION, Platform.XBOX, AgeRating.E);
+        game1.addRating(50);
+        game1.addRating(68);
+        game1.addRating(20);
+        game1.getRatings();
+        assertEquals(3, game1.getNumberOfRatings());
+    }
 
     @Test
-    public void TestingMethods()
+    public void TestAverageRating()
     {
-        Game game1 = new Game("cme", 3.6, null, null, null);
-        game1.addRating(34);
-        assertEquals(34, game1.getNumberOfRatings());
-        assertEquals(4, game1.toString());
+        Game game1 = new Game("ded", 455.0, Genre.ADVENTURE, Platform.XBOX, AgeRating.M);
+        game1.addRating(4);
+        game1.addRating(5);
+        assertEquals(4.5, game1.getAverageRating(), 0.1);
     }
+
 }
+
+
+
+
 
 

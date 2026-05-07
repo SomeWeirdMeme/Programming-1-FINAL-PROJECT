@@ -28,11 +28,29 @@ public class Game
     public Game(String title, double gameSize, Genre genre, Platform platform, AgeRating ageRating)
     {
         //SET title
+        this.title = title;
         //SET gameSize
+        this.gameSize = gameSize;
         //SET genre
+        this.genre = genre;
         //SET platform
+        this.platform = platform;
         //SET ageRating
+        this.ageRating = ageRating;
         //CREATE empty ratings list
+        this.ratings = new ArrayList<>();
+    }
+    
+    public void getGenre(){
+        System.out.println(genre);
+    }
+    
+    public void getPlatform(){
+        System.out.println(platform);
+    }
+    
+    public void getAgeRating(){
+        System.out.println(ageRating);
     }
     
     /**
@@ -41,6 +59,11 @@ public class Game
     public void addRating(int rating)
     {
         //ADD rating to ratings list
+        ratings.add(rating);
+    }
+    
+    public String getGameSize(){
+        return (gameSize + "MB");
     }
     
     /**
@@ -49,55 +72,46 @@ public class Game
     public double getAverageRating()
     {
         //IF ratings list is empty
-        //  RETURN 0
+        if(ratings.isEmpty()){
+            //  RETURN 0
+            return 0.0;
+        }
         //SET sum = 0
+        double sum = 0.0;
         //FOR each rating in ratings
-        //ADD rating to sum
+        for(double x : ratings){
+            sum += x / ratings.size();
+        }
         //RETURN sum
-        return 1;
+        return sum;
     }
     
     /**
-     * Returns the size of the game.
+     * Returns a list of all the ratings the game has.
      */
-    public double getGameSize()
-    {
-        //RETURN gameSize
-        return 1;
+    public void getRatings(){
+        //print message
+        System.out.println("Ratings for this game are: " + ratings);
     }
+    
     
     /**
      * Returns the total number of ratings submitted for the game.
      */
     public int getNumberOfRatings()
     {
-        //RETURN size of ratings list
-        return 1;
+        return ratings.size();
     }
     
     /**
-     * Returns a string containing the games details.
-     * Title, genre, platform, age rating, and size.
+     * Prints info about the object (game)
+     * Summary of game info.
      */
-    public String getDetails()
-    {
-        //RETURN string with:
-        //title
-        //genre
-        //platform
-        //age rating
-        //average rating
-        return null;
-    }
-    
-    /**
-     * Returns a readable summary of the game for printing.
-     * This method is automatically called when object is printed, summary of game info.
-     */
+    @Override
     public String toString()
     {
-        //RETURN string with
-        //title + platform + average rating
-        return null;
+        //print string with
+        //title + platform + average rating + genre + age rating + game size
+        return "Game title : " + title + "\n" + "Platform of game : " + platform + "\n" + "Average rating : " + getAverageRating() + "\n" + "Genre : " + genre + "\n" + "Age rating : " + ageRating + "\n" + "Game size : " + getGameSize();      
     }
 }

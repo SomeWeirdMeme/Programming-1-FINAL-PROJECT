@@ -44,7 +44,7 @@ public class MultiplayerTest
     public void TestingCreation()
     {
         Multiplayer multipla1 = new Multiplayer("fe", 3.3, null, null, null, 34, true);
-        assertEquals(23, multipla1.getDetails());
+        assertEquals(23, multipla1.toString());
     }
 
     @Test

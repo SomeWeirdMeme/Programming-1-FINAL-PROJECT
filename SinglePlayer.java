@@ -31,11 +31,11 @@ public class SinglePlayer extends Game
         //PRINT or simulate playing the game
     }
     
-    public String getDetails(){
+    public String toString(){
         //GET base details from Game
         //ADD story mode info
         //ADD estimated hours
         //RETURN string
-        return "x";
+        return "SinglePlayer: " + super.toString();
     }
 }

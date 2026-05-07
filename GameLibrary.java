@@ -17,18 +17,18 @@ public class GameLibrary
     private ArrayList<Game> games;
     //List of all game session in the library
     private ArrayList<GameSession> sessions;
-    
+
     /**
      * Initializes the library and name with it that will store
      * the info for games and sessions.
      */
     public GameLibrary(String name)
     {
-        //SET name
+        this.name = name;
         //CREATE empty games list
         //CREATE empty session list
     }
-    
+
     /**
      * Finds a returns the game by the title.
      */
@@ -39,7 +39,7 @@ public class GameLibrary
         //return game
         return null;
     }
-    
+
     /**
      * Returns an ArrayList of all the games in the library.
      */
@@ -48,17 +48,17 @@ public class GameLibrary
         //return games list
         return null;
     }
-    
+
     /**
      * Prints details about the entire game library.
      */
     public void printLibraryDetails()
     {
-        //PRINT library name
+        System.out.println(name);
         //for each game
         //toString game
     }
-    
+
     /**
      * Returns list of games filtered by the genre.
      */
@@ -70,7 +70,7 @@ public class GameLibrary
         //ADD to result
         return null;
     }
-    
+
     /**
      * Returns a list filtered by platform.
      */
@@ -81,7 +81,7 @@ public class GameLibrary
         //ADD game to list
         return null;
     }
-    
+
     /**
      * Returns a list of games filtered by the age rating.
      */
@@ -92,7 +92,7 @@ public class GameLibrary
         //ADD game to list
         return null;
     }
-    
+
     /**
      * returns a list of games organized by size.   
      */
@@ -103,7 +103,7 @@ public class GameLibrary
         //ADD game to list
         return null;
     }
-    
+
     /**
      * Returns a list of the top rated games.
      */
@@ -114,7 +114,7 @@ public class GameLibrary
         //ADD game to list
         return null;
     }
-    
+
     /**
      * Adds a new game to the library.
      */
@@ -122,7 +122,7 @@ public class GameLibrary
     {
         //ADD game to games list
     }
-    
+
     /**
      * removes a game from the library.
      */
@@ -130,7 +130,7 @@ public class GameLibrary
     {
         //REMOVE game from games list   
     }
-    
+
     /**
      * Returns all sessions that are recorded.
      */
@@ -139,7 +139,7 @@ public class GameLibrary
         //RETURNS session list
         return null;
     }
-    
+
     /**
      * Returns all sessions associated with a specific game.
      */
@@ -150,7 +150,7 @@ public class GameLibrary
         //ADD session to collection
         return null;
     }
-    
+
     /**
      * Adds a new Session to the library.
      */
@@ -158,7 +158,7 @@ public class GameLibrary
     {
         //ADD session to session list
     }
-    
+
     /**
      * Prints a log of all game sessions
      */
@@ -166,5 +166,23 @@ public class GameLibrary
         //FOR each session in sessions list
         //SHOW session
         System.out.println("Majeed");
+    }
+    
+    
+    public static void main(String[] args) 
+    {
+        //Create the Library
+        GameLibrary myLib = new GameLibrary("My Games");
+
+        //Create one SinglePlayer game
+        SinglePlayer game1 = new SinglePlayer("Spider-Man", 45.0, Genre.ACTION, Platform.PLAYSTATION, AgeRating.T, true, 20);
+
+        //Add it to the library
+        myLib.addGame(game1);
+        System.out.println("game1: "+ game1);
+
+        //Print something simple
+        System.out.println("Library created: " + myLib.name);
+        System.out.println("Game added: " + game1.toString());
     }
 }

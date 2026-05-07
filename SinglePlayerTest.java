@@ -1,5 +1,4 @@
 
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -44,7 +43,7 @@ public class SinglePlayerTest
     public void ObjectCreation()
     {
         SinglePlayer singlePl1 = new SinglePlayer("fef", 3.0, null, null, null, true, 45);
-        assertEquals(null, singlePl1.getDetails());
+        assertEquals(null, singlePl1.toString());
     }
 
     @Test
