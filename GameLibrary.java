@@ -25,8 +25,11 @@ public class GameLibrary
     public GameLibrary(String name)
     {
         this.name = name;
-        //CREATE empty games list
+        //set name to name
+        sessions = new ArrayList<>();
         //CREATE empty session list
+        games = new ArrayList<>();
+        //CREATE empty sesion list
     }
 
     /**
@@ -34,9 +37,11 @@ public class GameLibrary
      */
     public Game findGameByTitle(String title)
     {
-        //FOR each game in games
-        //IF title matches
-        //return game
+        for(Game x : games){
+            if(x.getTitle().equals(title)){
+                return x;
+            }
+        }
         return null;
     }
 
@@ -45,8 +50,7 @@ public class GameLibrary
      */
     public ArrayList<Game> listAllGames()
     {
-        //return games list
-        return null;
+        return games;
     }
 
     /**
@@ -54,9 +58,12 @@ public class GameLibrary
      */
     public void printLibraryDetails()
     {
-        System.out.println(name);
-        //for each game
-        //toString game
+        System.out.println("Library: " + name);
+
+        for(Game game : games) {
+            System.out.println(game);
+        }
+
     }
 
     /**
@@ -64,22 +71,32 @@ public class GameLibrary
      */
     public ArrayList<Game> listByGenre(Genre genre)
     {
-        //CREATE empty result list
-        //FOR each game
-        //IF matches condition
-        //ADD to result
-        return null;
-    }
+        ArrayList<Game> listByGenres = new ArrayList<>();
 
+        for(Game game : games){
+            if(game.getGenre() == genre){
+                listByGenres.add(game);
+            }
+        }
+        return listByGenres;
+    }
+    
     /**
      * Returns a list filtered by platform.
      */
     public ArrayList<Game> listByPlatform(Platform platform)
     {
+        ArrayList<Game> listByPlatform = new ArrayList<>();
+
         //FOR each game in games list
-        //IF game platform equals given platform
-        //ADD game to list
-        return null;
+        for(Game game : games){
+            //IF game platform equals given platform
+            if(game.getPlatform() == platform){
+                //ADD game to list
+                listByPlatform.add(game);
+            }
+        }  
+        return listByPlatform;
     }
 
     /**
@@ -87,21 +104,17 @@ public class GameLibrary
      */
     public ArrayList<Game> listByAgeRating(AgeRating  ageRating)
     {
+        ArrayList<Game> listByAgeRating = new ArrayList<>();
+        
         //FOR each game in games list
-        //IF game size matches condition
+        for(Game game : games){
+            //IF game size matches condition
+            if(game.getAgeRating() == ageRating){
+                listByAgeRating.add(game);
+            }
+        }
         //ADD game to list
-        return null;
-    }
-
-    /**
-     * returns a list of games organized by size.   
-     */
-    public ArrayList<Game> listBySize(Double gameSize)
-    {
-        //FOR each game in games list
-        //IF game size matches condition
-        //ADD game to list
-        return null;
+        return listByAgeRating;
     }
 
     /**
@@ -167,8 +180,7 @@ public class GameLibrary
         //SHOW session
         System.out.println("Majeed");
     }
-    
-    
+
     public static void main(String[] args) 
     {
         //Create the Library

@@ -13,6 +13,7 @@ import org.junit.jupiter.api.Test;
  */
 public class GameTest
 {
+    private Game game1;
     /**
      * Default constructor for test class GameTest
      */
@@ -28,7 +29,7 @@ public class GameTest
     @BeforeEach
     public void setUp()
     {
-        Game game1 = new Game("Roblox", 34.0, Genre.ADVENTURE, Platform.PLAYSTATION, AgeRating.T);
+        game1 = new Game("Halo", 67.0, Genre.ACTION, Platform.XBOX, AgeRating.E);
     }
 
     /**
@@ -44,7 +45,6 @@ public class GameTest
     @Test
     public void TestingRatings()
     {
-        Game game1 = new Game("Halo", 67.0, Genre.ACTION, Platform.XBOX, AgeRating.E);
         game1.addRating(50);
         game1.addRating(68);
         game1.addRating(20);
@@ -55,13 +55,21 @@ public class GameTest
     @Test
     public void TestAverageRating()
     {
-        Game game1 = new Game("ded", 455.0, Genre.ADVENTURE, Platform.XBOX, AgeRating.M);
         game1.addRating(4);
         game1.addRating(5);
         assertEquals(4.5, game1.getAverageRating(), 0.1);
     }
 
+
+    @Test
+    public void TestToString()
+    {
+        game1.addRating(4);
+        game1.addRating(6);
+        assertEquals(toString(), game1.toString());
+    }
 }
+
 
 
 

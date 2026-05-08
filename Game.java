@@ -41,16 +41,20 @@ public class Game
         this.ratings = new ArrayList<>();
     }
     
-    public void getGenre(){
-        System.out.println(genre);
+    public String getTitle(){
+        return title;
     }
     
-    public void getPlatform(){
-        System.out.println(platform);
+    public Genre getGenre(){
+        return genre;
     }
     
-    public void getAgeRating(){
-        System.out.println(ageRating);
+    public Platform getPlatform(){
+        return platform;
+    }
+    
+    public AgeRating getAgeRating(){
+        return ageRating;
     }
     
     /**
@@ -89,11 +93,10 @@ public class Game
     /**
      * Returns a list of all the ratings the game has.
      */
-    public void getRatings(){
-        //print message
-        System.out.println("Ratings for this game are: " + ratings);
+    public String getRatings(){
+        //return message
+        return ("Ratings for this game are: " + ratings);
     }
-    
     
     /**
      * Returns the total number of ratings submitted for the game.
