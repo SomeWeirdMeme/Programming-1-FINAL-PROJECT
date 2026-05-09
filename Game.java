@@ -18,10 +18,14 @@ public class Game
     private Platform platform;
     //The age rating of the game (E, T, M)
     private AgeRating ageRating;
+    //Max rating
+    private static final int maxRating = 5;
+    //Minimum rating
+    private static final int minimumRating = 0;
     //The amount of space it is taking up for the game (in megabytes)
     private double gameSize;
     //A collection of ratings for the game.
-    private ArrayList<Integer> ratings;
+    private ArrayList<Double> ratings;
     /**
      * Constructor for objects of class Game
      */
@@ -40,36 +44,42 @@ public class Game
         //CREATE empty ratings list
         this.ratings = new ArrayList<>();
     }
-    
+
     public String getTitle(){
         return title;
     }
-    
+
     public Genre getGenre(){
         return genre;
     }
-    
+
     public Platform getPlatform(){
         return platform;
     }
-    
+
     public AgeRating getAgeRating(){
         return ageRating;
     }
-    
+
     /**
      * adds a rating to the game.
      */
-    public void addRating(int rating)
+    public boolean addRating(double rating)
     {
         //ADD rating to ratings list
+        if(rating > maxRating || rating < minimumRating){
+            System.out.println("WRONG, The correct range is between: " + "0 - 5");
+            return false;
+        } 
+        System.out.println("Rating added successfully");
         ratings.add(rating);
-    }
-    
+        return true;
+    }  
+
     public String getGameSize(){
         return (gameSize + "MB");
     }
-    
+
     /**
      * Calculates and returns the average between all ratings for the game.
      */
@@ -89,7 +99,7 @@ public class Game
         //RETURN sum
         return sum;
     }
-    
+
     /**
      * Returns a list of all the ratings the game has.
      */
@@ -97,7 +107,7 @@ public class Game
         //return message
         return ("Ratings for this game are: " + ratings);
     }
-    
+
     /**
      * Returns the total number of ratings submitted for the game.
      */
@@ -105,7 +115,7 @@ public class Game
     {
         return ratings.size();
     }
-    
+
     /**
      * Prints info about the object (game)
      * Summary of game info.

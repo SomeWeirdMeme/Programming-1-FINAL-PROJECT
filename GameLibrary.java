@@ -37,8 +37,8 @@ public class GameLibrary
      */
     public Game findGameByTitle(String title)
     {
-        for(Game x : games){
-            if(x.getTitle().equals(title)){
+        for (Game x : games) {
+            if (x.getTitle().equals(title)) {
                 return x;
             }
         }
@@ -67,65 +67,58 @@ public class GameLibrary
     }
 
     /**
-     * Returns list of games filtered by the genre.
+     * prints list of games filtered by the genre.
      */
-    public ArrayList<Game> listByGenre(Genre genre)
+    public void printGamesByGenre(Genre genre)
     {
-        ArrayList<Game> listByGenres = new ArrayList<>();
-
-        for(Game game : games){
-            if(game.getGenre() == genre){
-                listByGenres.add(game);
+        System.out.println("Games in genre: " + genre);
+        for (Game game : games) {
+            if (game.getGenre() == genre) {
+                System.out.println(game);
             }
         }
-        return listByGenres;
     }
-    
-    /**
-     * Returns a list filtered by platform.
-     */
-    public ArrayList<Game> listByPlatform(Platform platform)
-    {
-        ArrayList<Game> listByPlatform = new ArrayList<>();
 
+    /**
+     * Prints a list filtered by platform.
+     */
+    public void printGamesByPlatform(Platform platform)
+    {
         //FOR each game in games list
         for(Game game : games){
             //IF game platform equals given platform
             if(game.getPlatform() == platform){
-                //ADD game to list
-                listByPlatform.add(game);
+                System.out.println(game);
             }
         }  
-        return listByPlatform;
     }
 
     /**
      * Returns a list of games filtered by the age rating.
      */
-    public ArrayList<Game> listByAgeRating(AgeRating  ageRating)
+    public void printGamesByAgeRating(AgeRating ageRating)
     {
-        ArrayList<Game> listByAgeRating = new ArrayList<>();
-        
         //FOR each game in games list
         for(Game game : games){
             //IF game size matches condition
             if(game.getAgeRating() == ageRating){
-                listByAgeRating.add(game);
+                System.out.println(game);
             }
         }
-        //ADD game to list
-        return listByAgeRating;
     }
 
     /**
      * Returns a list of the top rated games.
      */
-    public ArrayList<Game> getTopRatedGames()
+    public void printTopRatedGames()
     {
         //FOR each game in games list
-        //IF game.getAverage() >= x
-        //ADD game to list
-        return null;
+        for (Game game : games){
+            //IF game.getAverage() >= x
+            if (game.getAverageRating() >= 4.0){
+                System.out.println(game);
+            }
+        }
     }
 
     /**
@@ -134,6 +127,7 @@ public class GameLibrary
     public void addGame(Game game)
     {
         //ADD game to games list
+        games.add(game);
     }
 
     /**
@@ -141,7 +135,8 @@ public class GameLibrary
      */
     public void removeGame(Game game)
     {
-        //REMOVE game from games list   
+        //REMOVE game from games list
+        games.remove(game);
     }
 
     /**
@@ -150,7 +145,7 @@ public class GameLibrary
     public ArrayList<GameSession> getAllSessions()
     {
         //RETURNS session list
-        return null;
+        return sessions;
     }
 
     /**
@@ -158,10 +153,16 @@ public class GameLibrary
      */
     public ArrayList<GameSession> getSessionsForGame(Game game)
     {
+        ArrayList<GameSession> sessionsForGame = new ArrayList<>();
         //FOR each session in sessions list
-        //IF sessions.getGame() equals given game
-        //ADD session to collection
-        return null;
+        for(GameSession session : sessions){
+            //IF sessions.getGame() equals given game
+            if(session.getGame() == game){
+                //ADD session to collection
+                sessionsForGame.add(session);
+            }        
+        }
+        return sessionsForGame;
     }
 
     /**
@@ -170,6 +171,11 @@ public class GameLibrary
     public void addSession(GameSession session)
     {
         //ADD session to session list
+        sessions.add(session);
+    }
+
+    public void removeSession(GameSession session){
+        sessions.remove(session);
     }
 
     /**
@@ -177,8 +183,11 @@ public class GameLibrary
      */
     public void printSessionLog(){
         //FOR each session in sessions list
-        //SHOW session
-        System.out.println("Majeed");
+        System.out.println("       Session Log       ");
+        for(GameSession session : sessions) {
+            //print session
+            System.out.println(session);
+        }
     }
 
     public static void main(String[] args) 

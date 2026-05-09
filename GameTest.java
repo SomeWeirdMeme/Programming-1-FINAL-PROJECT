@@ -45,9 +45,9 @@ public class GameTest
     @Test
     public void TestingRatings()
     {
-        game1.addRating(50);
-        game1.addRating(68);
-        game1.addRating(20);
+        game1.addRating(4.0);
+        game1.addRating(2.5);
+        game1.addRating(1.3);
         game1.getRatings();
         assertEquals(3, game1.getNumberOfRatings());
     }

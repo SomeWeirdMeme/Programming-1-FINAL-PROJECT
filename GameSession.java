@@ -46,6 +46,10 @@ public class GameSession
         //SET duration = 0
     }
     
+    public Game getGame(){
+        return game;
+    }
+    
     /**
      * Returns a summary of the session details
      * game, duration, region, and date.
