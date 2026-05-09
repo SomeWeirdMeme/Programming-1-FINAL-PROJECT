@@ -59,9 +59,10 @@ public class GameLibrary
     public void printLibraryDetails()
     {
         System.out.println("Library: " + name);
-
+        int i = 1;
         for(Game game : games) {
-            System.out.println(game);
+            System.out.println(i + ". " + game.getTitle());
+            i++;
         }
 
     }
@@ -71,12 +72,15 @@ public class GameLibrary
      */
     public void printGamesByGenre(Genre genre)
     {
-        System.out.println("Games in genre: " + genre);
+        System.out.println(" ===Games in genre: " + genre + " ===");
+        int i = 1;
         for (Game game : games) {
             if (game.getGenre() == genre) {
-                System.out.println(game);
+                System.out.println(i + ". " + game.getTitle());
+                i++;
             }
         }
+        System.out.println();
     }
 
     /**
@@ -84,13 +88,17 @@ public class GameLibrary
      */
     public void printGamesByPlatform(Platform platform)
     {
+        System.out.println(" === Platform: " + platform + " ===");
+        int i = 1;
         //FOR each game in games list
         for(Game game : games){
             //IF game platform equals given platform
             if(game.getPlatform() == platform){
-                System.out.println(game);
+                System.out.println(i + ". " + game.getTitle());
+                i++;
             }
         }  
+        System.out.println();
     }
 
     /**
@@ -98,11 +106,14 @@ public class GameLibrary
      */
     public void printGamesByAgeRating(AgeRating ageRating)
     {
+        System.out.println(" === AgeRatings " + ageRating + " ===");
+        int i = 1;
         //FOR each game in games list
         for(Game game : games){
             //IF game size matches condition
             if(game.getAgeRating() == ageRating){
-                System.out.println(game);
+                System.out.println(i + ". " + game.getTitle());
+                i++;
             }
         }
     }
@@ -112,13 +123,17 @@ public class GameLibrary
      */
     public void printTopRatedGames()
     {
+        System.out.println("=== Top Rated Games ===");
+        int i = 1;
         //FOR each game in games list
         for (Game game : games){
             //IF game.getAverage() >= x
             if (game.getAverageRating() >= 4.0){
-                System.out.println(game);
+                System.out.println(i + ". " + game.getTitle());
+                i++;
             }
         }
+        System.out.println();
     }
 
     /**
@@ -154,6 +169,7 @@ public class GameLibrary
     public ArrayList<GameSession> getSessionsForGame(Game game)
     {
         ArrayList<GameSession> sessionsForGame = new ArrayList<>();
+
         //FOR each session in sessions list
         for(GameSession session : sessions){
             //IF sessions.getGame() equals given game
@@ -164,7 +180,22 @@ public class GameLibrary
         }
         return sessionsForGame;
     }
+    
+    public void printSessionsForGame(Game game)
+    {
+        System.out.println("=== Sessions for: " + game.getTitle() + " ===");
 
+        ArrayList<GameSession> sessionsForGame = getSessionsForGame(game);
+
+        int i = 1;
+        for (GameSession session : sessionsForGame) {
+            System.out.println(i + ". " + session);
+            i++;
+        }
+
+        System.out.println();
+    }
+    
     /**
      * Adds a new Session to the library.
      */
