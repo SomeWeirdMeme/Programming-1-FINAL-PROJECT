@@ -31,6 +31,14 @@ public class SinglePlayer extends Game
         //PRINT or simulate playing the game
     }
     
+    public int getEstimatedHours(){
+        return estimatedHours;
+    }
+    
+    public boolean getHasStoryMode(){
+        return hasStoryMode;
+    }
+    
     public String toString(){
         //GET base details from Game
         //ADD story mode info

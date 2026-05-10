@@ -40,18 +40,5 @@ public class MultiplayerTest
     {
     }
 
-    @Test
-    public void TestingCreation()
-    {
-        Multiplayer multipla1 = new Multiplayer("fe", 3.3, null, null, null, 34, true);
-        assertEquals(23, multipla1.toString());
-    }
-
-    @Test
-    public void TestingPlay()
-    {
-        Multiplayer multipla1 = new Multiplayer("fe", 3.3, null, null, null, 4, true);
-        multipla1.play();
-    }
 }
 

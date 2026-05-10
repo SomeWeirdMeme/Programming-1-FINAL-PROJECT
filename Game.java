@@ -76,8 +76,9 @@ public class Game
         return true;
     }  
 
-    public String getGameSize(){
-        return (gameSize + "MB");
+    public double getGameSize()
+    {
+        return gameSize;
     }
 
     /**
@@ -93,11 +94,11 @@ public class Game
         //SET sum = 0
         double sum = 0.0;
         //FOR each rating in ratings
-        for(double x : ratings){
-            sum += x / ratings.size();
+        for(double r : ratings){
+            sum = sum + r;
         }
         //RETURN sum
-        return sum;
+        return sum / ratings.size();
     }
 
     /**
@@ -125,6 +126,12 @@ public class Game
     {
         //print string with
         //title + platform + average rating + genre + age rating + game size
-        return "Game title : " + title + "\n" + "Platform of game : " + platform + "\n" + "Average rating : " + getAverageRating() + "\n" + "Genre : " + genre + "\n" + "Age rating : " + ageRating + "\n" + "Game size : " + getGameSize();      
+        return "=== Game Info ===" +
+        "\nTitle: " + title + 
+        "\nPlatform of Game : " + platform + 
+        "\nAverage Rating : " + getAverageRating() + 
+        "\nGenre : " + genre + 
+        "\nAge rating : " + ageRating + 
+        "\nGame size : " + gameSize + "MB";      
     }
 }

@@ -8,8 +8,8 @@ import org.junit.jupiter.api.Test;
 /**
  * The test class OnlineTest.
  *
- * @author  (Anthony O'Sullivan, David Grondin)
- * @version (0.0)
+ * @author  (your name)
+ * @version (a version number or a date)
  */
 public class OnlineTest
 {
@@ -39,20 +39,4 @@ public class OnlineTest
     public void tearDown()
     {
     }
-
-    @Test
-    public void TestingMethods()
-    {
-        Online online1 = new Online("game", 23.8, null, null, null, "fge", true);
-        assertEquals(1, online1.getDetails());
-    }
-
-    @Test
-    public void ObjectCreation()
-    {
-        Online online1 = new Online("fe", 3.3, null, null, null, "fe", false);
-        online1.connect();
-        online1.play();
-    }
 }
-

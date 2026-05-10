@@ -13,45 +13,61 @@ public class Online extends Game
     private String serverName;
     //Kinda not usefull but indicates wether you need a subscription to play online.
     private boolean requiresSubscription;
-    
+
     /**
      * Constructor for objects of class Online
      */
-    public Online(String title, double gameSize, Genre genre, Platform platform, AgeRating ageRating, String serverName, boolean requiresSubscription)
+    public Online(Game game, String serverName, boolean requiresSubscription)
     {
-        super(title, gameSize, genre, platform, ageRating);
-        
+        super(game.getTitle(),game.getGameSize(),game.getGenre(),game.getPlatform(),game.getAgeRating());
+
         //SET serverName
+        this.serverName = serverName;
         //SET requiresSubscription 
+        this.requiresSubscription = requiresSubscription;
     }
-    
+
     public void play()
     {
-        //SHOWING Starting online game
+        System.out.println("============== STARTING GAME ==============");
+        System.out.println("Launching online game...");
+
+        connect();
+
+        System.out.println("Loading game data...");
+        System.out.println("Entering server: " + serverName);
+
+        if (requiresSubscription)
+        {
+            System.out.println("Subscription verified.");
+        }
+        System.out.println("==================== GAME STATUS =====================");
+        System.out.println("Game is now running.");
     }
-    
-    public void connect()
+
+    private void connect()
     {
+        System.out.println("===============  CONNECTING.... ===============");
+        System.out.println("Checking subscription");
         //IF requiresSubscription is true
-        //SHOW "Checking subscription..."
-        //SHOW "Connection to server" + serverName
-        //Else
-        //SHOW "Connection to server" + serverName
-        //END
+        if (requiresSubscription){
+            //Print "Checking subscription..."
+            System.out.println("Connection Requires Subscription");
+        } else {
+            System.out.println("Status: No subscription needed");
+            System.out.println("No subscription required.");
+        }
+        System.out.println("Connecting to Server: " + serverName);
+        System.out.println("============= CONNECTION STATUS =============");
+        System.out.println("Connection successful.....");
     }
-    
-    public String toString(){
-        //GET base details from Game
-        //ADD servername
-        //ADD requiresSubs info
-        //RETURN string
-        return "Online : " + super.toString();
+
+    public String getServerName(){
+        return ("Server Name: " + serverName);
     }
-    
-    public String getDetails(){
-        //GET base game details (.getDetails)
-        //ADD servename
-        //ADD requiresSubscription info
-        return null;
+
+    public boolean requiresSubscription(){
+        return requiresSubscription;
     }
+
 }

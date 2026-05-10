@@ -16,23 +16,32 @@ public class Multiplayer extends Game
     /**
      * Constructor for objects of class Multiplayer
      */
-    public Multiplayer(String title, double gameSize, Genre genre, Platform platform, AgeRating ageRating, int maxPlayers, boolean localMultiplayer)
+    public Multiplayer(Game game, int maxPlayers, boolean localMultiplayer)
     {
-       super(title, gameSize, genre, platform, ageRating);
+       super(game.getTitle(),game.getGameSize(),game.getGenre(),game.getPlatform(),game.getAgeRating());
        //SET maxPlayers
+       this.maxPlayers = maxPlayers;
        //SET localMultiplayer
+       this.localMultiplayer = localMultiplayer;
+    }
+    
+    public boolean isLocalMultiplayer(){
+        return localMultiplayer;
+    }
+    
+    public int getMaxPlayers(){
+        return maxPlayers;
     }
     
     public void play(){
         //PRINT or simulate multi
+        System.out.println("Playing multiplayer with up to " + maxPlayers + " players.");
     }
     
+    @Override
     public String toString(){
-        //GET base details from Game
-        //ADD max players
-        //ADD local multi info
-        //RETURN string
-        return "x";
+        return super.toString() + " | Max PLayers: " + maxPlayers + " | Local Multiplayer: " + localMultiplayer;
+        
     }
     
 }
