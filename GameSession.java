@@ -23,13 +23,17 @@ public class GameSession
     /**
      * Creates a session linked to a specific game and date.
      */
-    public GameSession(Game game, String date, String region)
+    public GameSession(Game game, String date, String region) throws InterruptedException
     {
         //SET game
         //SET date
         //SET region
         //SET duration = 0
-        durationMinutes = 0;
+        long startTime = System.currentTimeMillis();
+        Thread.sleep(1000);
+        long endTime = System.currentTimeMillis();
+        long durationSeconds = endTime - startTime;
+        long durationMinutes = durationSeconds/60;
         //SET notes = empty
     }
     
