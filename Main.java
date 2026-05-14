@@ -3,14 +3,15 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
+        // create the game library
         GameLibrary library = new GameLibrary("My Game Library");
+        //Makes a scanner to read user imput
         Scanner scanner = new Scanner(System.in);
-
+        //keeps the program runnin
         boolean running = true;
-
+        //MAIN LOOP
         while (running) {
-
+            //MENU
             System.out.println("\n==================================");
             System.out.println("        GAME LIBRARY        ");
             System.out.println("==================================");
@@ -29,20 +30,21 @@ public class Main {
             System.out.println("0. Exit");
             System.out.println("==================================");
             System.out.print("Select an option: ");
-
+            //user choice
             String choice = scanner.nextLine();
             System.out.println();
-
+            //see what they chose
             switch (choice) {
 
                 case "1":
+                    //new gaME
                     System.out.println("Choose Game Type:");
                     System.out.println("1. Single Player");
                     System.out.println("2. Multiplayer");
                     System.out.println("3. Online");
                     System.out.print("Type: ");
                     String type = scanner.nextLine();
-
+                    //baisc info
                     System.out.print("Title: ");
                     String title = scanner.nextLine();
 
@@ -61,7 +63,7 @@ public class Main {
                     Game game = null;
 
                     if (type.equals("1")) {
-
+                        //Single player info
                         System.out.print("Has Story Mode (true/false): ");
                         boolean story = Boolean.parseBoolean(scanner.nextLine());
 
@@ -79,7 +81,7 @@ public class Main {
 
                     
                     else if (type.equals("2")) {
-
+                        //Multi info
                         System.out.print("Max Players: ");
                         int maxPlayers = Integer.parseInt(scanner.nextLine());
 
@@ -95,7 +97,7 @@ public class Main {
 
                 
                     else if (type.equals("3")) {
-
+                        //online extra info
                         System.out.print("Server Name: ");
                         String server = scanner.nextLine();
 
@@ -113,13 +115,13 @@ public class Main {
                         System.out.println("Invalid game type.");
                         break;
                     }
-
+                    //save game into library
                     library.addGame(game);
                     System.out.println("Game added successfully!");
                     break;
 
                 case "2":
-
+                    //Show all games
                     if (library.listAllGames().isEmpty()) {
                         System.out.println("No games available.");
                         break;
@@ -156,6 +158,7 @@ public class Main {
                     break;
 
                 case "3":
+                    //game rate
                     if (library.listAllGames().isEmpty()) {
                         System.out.println("No games available.");
                         break;
@@ -175,6 +178,7 @@ public class Main {
                     break;
 
                 case "4":
+                    //filter by genre
                     if (library.listAllGames().isEmpty()) {
                         System.out.println("No games available.");
                         break;
@@ -186,6 +190,7 @@ public class Main {
                     break;
 
                 case "5":
+                    //filter by platform
                     if (library.listAllGames().isEmpty()) {
                         System.out.println("No games available.");
                         break;
@@ -197,6 +202,7 @@ public class Main {
                     break;
 
                 case "6":
+                    //filter by age rating
                     if (library.listAllGames().isEmpty()) {
                         System.out.println("No games available.");
                         break;
@@ -208,6 +214,7 @@ public class Main {
                     break;
 
                 case "7":
+                    //Add game session
                     if (library.listAllGames().isEmpty()) {
                         System.out.println("No games available.");
                         break;
@@ -228,14 +235,14 @@ public class Main {
                         String notes = scanner.nextLine();
 
                         GameSession session = new GameSession(sg, date, region);
-
+                        //start time
                         session.startSession();
 
                         System.out.println("Session started... press ENTER to end session");
                         scanner.nextLine();
-
+                        //End time
                         session.endSession(notes);
-
+                        //save session
                         library.addSession(session);
 
                         System.out.println("Session saved!");
@@ -246,6 +253,7 @@ public class Main {
                     break;
 
                 case "8":
+                    //show all sessions
                     if (library.getAllSessions().isEmpty()) {
                         System.out.println("No sessions recorded yet.");
                         break;
@@ -256,6 +264,7 @@ public class Main {
                     break;
 
                 case "9":
+                    //Top rated games
                     if (library.listAllGames().isEmpty()) {
                         System.out.println("No games available.");
                         break;
@@ -273,7 +282,7 @@ public class Main {
                     System.out.println("Invalid option. Please select a valid menu number.");
             }
         }
-
+        //GG RAHH I HATE PAMJOT tassia is number one teacher
         scanner.close();
     }
 }

@@ -40,5 +40,23 @@ public class MultiplayerTest
     {
     }
 
+
+    @Test
+    public void TESTCREATIONAHHH()
+    {
+        Game game1 = new Game("gewr", 45.8, Genre.ACTION, Platform.PC, AgeRating.M);
+        Multiplayer multipla1 = new Multiplayer(game1, 56, true);
+    }
+
+    @Test
+    public void TestGetters()
+    {
+        Game game1 = new Game("egf", 45.0, Genre.ACTION, Platform.PC, AgeRating.M);
+        Multiplayer multipla1 = new Multiplayer(game1, 455, true);
+        assertEquals(455, multipla1.getMaxPlayers());
+        assertEquals(true, multipla1.isLocalMultiplayer());
+    }
 }
+
+
 
