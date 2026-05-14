@@ -109,6 +109,11 @@ public class Game
         return ("Ratings for this game are: " + ratings);
     }
 
+    public int getMaxSessionMinutes()
+    {
+        return Integer.MAX_VALUE;
+    }
+
     /**
      * Returns the total number of ratings submitted for the game.
      */

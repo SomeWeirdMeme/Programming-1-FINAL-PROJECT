@@ -127,10 +127,14 @@ public class GameLibrary
         //FOR each game in games list
         for (Game g : games){
             //IF game.getAverage() >= x
-            if (g.getAverageRating() >= 4.0){
-                System.out.println(i + ". " + g.getTitle());
+            double avg = g.getAverageRating();
+            if (avg >= 4.0){
+                System.out.println(i + ". " + g.getTitle() + " | Average Rating: " + avg);
                 i++;
             }
+        }
+        if (i == 1){
+            System.out.println("No top rated games yet.");
         }
         System.out.println();
     }
@@ -218,22 +222,5 @@ public class GameLibrary
             //print session
             System.out.println(session);
         }
-    }
-
-    public static void main(String[] args) 
-    {
-        //Create the Library
-        GameLibrary myLib = new GameLibrary("My Games");
-
-        //Create one SinglePlayer game
-        SinglePlayer game1 = new SinglePlayer("Spider-Man", 45.0, Genre.ACTION, Platform.PLAYSTATION, AgeRating.T, true, 20);
-
-        //Add it to the library
-        myLib.addGame(game1);
-        System.out.println("game1: "+ game1);
-
-        //Print something simple
-        System.out.println("Library created: " + myLib.name);
-        System.out.println("Game added: " + game1.toString());
     }
 }

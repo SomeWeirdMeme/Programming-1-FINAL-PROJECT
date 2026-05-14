@@ -15,85 +15,96 @@ public class GameSession
     private String date;
     //Notes that are created and stored for later use, (Call on getNotes).
     private String sessionNotes;
-     //Checks which region the game session is taking place in.
+    //Checks which region the game session is taking place in.
     private String region;
     //The game that is being referred to in the current session.
     private Game game;
-    
+
+    private long startTime;
     /**
      * Creates a session linked to a specific game and date.
      */
     public GameSession(Game game, String date, String region)
     {
-        //SET game
-        //SET date
-        //SET region
-        //SET duration = 0
-        durationMinutes = 0;
-        //SET notes = empty
+        this.game = game;
+        this.date = date;
+        this.region = region;
+        this.durationMinutes = 0;
+        this.sessionNotes = "";
+        this.startTime = System.currentTimeMillis();
+
     }
-    
+
     //This needs some work Imma fix afterwards region is fully implemented I think...
     public String getRegion(){
         return region;
     }
-    
+
     /**
      * Starts a session
      * Used to track Mins and similar data.
      */
-    public void startSession(){
-        //SET duration = 0
+    public void startSession()
+    {
+        startTime = System.currentTimeMillis();
     }
-    
-    public Game getGame(){
+
+    public Game getGame()
+    {
         return game;
     }
-    
-    /**
-     * Returns a summary of the session details
-     * game, duration, region, and date.
-     */
-    public String getSummary(){
-        //RETURN string with:
-        //game
-        //date
-        //region
-        //duration
-        return "x";
-    }
-    
+
     /**
      * Returns the notes recorded for the session.
      */
     public String getNotes(){
-        return "notes";
+        return sessionNotes;
     }
-    
-    
+
+    public String getSummary()
+    {
+        return "========== SESSION ==========\n" +
+        "Game: " + game.getTitle() + "\n" +
+        "Date: " + date + "\n" +
+        "Region: " + region + "\n" +
+        "Duration: " + durationMinutes + " mins\n" +
+        "Notes: " + sessionNotes + "\n" +
+        "============================";
+    }
+
     /**
      * Returns the duration of the session in mins.
-    */
+     */
     public int getDurationMinutes(){
         return durationMinutes;
     }
-    
+
     /**
      * Ends the session and records the time and notes.
      * 
-    */
-    public void endSession(int durationMinutes, String notes){
-        //SET duration 
-        //SET notes
+     */
+    public void endSession(String notes)
+    {
+        long endTime = System.currentTimeMillis();
+        int actualMinutes = (int)((endTime - startTime) / 60000);
+        int max = game.getMaxSessionMinutes();
+
+        if (actualMinutes > max){
+            System.out.println("Session exceeded max allowed time. Capping to limit.");
+            actualMinutes = max;
+        }
+
+        this.durationMinutes = actualMinutes;
+        this.sessionNotes = notes;
     }
-    
-    
+
     /**
      * Returns a string representation of the session 
      */
     public String toString(){
-        //RETURN short summary of session
-        return "x";
+        return game.getTitle() +
+        " | " + date +
+        " | " + durationMinutes + " mins";
     }
-    
+
 }

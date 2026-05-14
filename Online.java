@@ -26,7 +26,11 @@ public class Online extends Game
         //SET requiresSubscription 
         this.requiresSubscription = requiresSubscription;
     }
-
+    
+    public void printGameDetails(){
+        System.out.println(toString());
+    }
+    
     public void play()
     {
         System.out.println("============== STARTING GAME ==============");

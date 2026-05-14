@@ -39,4 +39,12 @@ public class OnlineTest
     public void tearDown()
     {
     }
+
+    @Test
+    public void TestingPlay()
+    {
+        Game game1 = new Game(" gt5", 45.0, Genre.ACTION, Platform.PC, AgeRating.M);
+        Online online1 = new Online(game1, "rfvv", true);
+        online1.play();
+    }
 }
