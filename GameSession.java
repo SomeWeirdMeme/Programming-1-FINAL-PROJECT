@@ -24,7 +24,7 @@ public class GameSession
     /**
      * Creates a session linked to a specific game and date.
      */
-    public GameSession(Game game, String date, String region)
+    public GameSession(Game game, String date, String region) 
     {
         this.game = game;
         this.date = date;
@@ -32,7 +32,6 @@ public class GameSession
         this.durationMinutes = 0;
         this.sessionNotes = "";
         this.startTime = System.currentTimeMillis();
-
     }
 
     //This needs some work Imma fix afterwards region is fully implemented I think...
